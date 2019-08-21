@@ -1,5 +1,5 @@
 package com.twu.biblioteca;
 
 public interface SysOutDelegate {
-    void println(String val);
+    void println(String[] val);
 }
