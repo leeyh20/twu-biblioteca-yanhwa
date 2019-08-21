@@ -6,10 +6,11 @@ import java.util.List;
 public class BibliotecaApp {
 
     private static SysOutDelegate sysOutDelegate = new RealSysOut();
+    private static List<String> libraryBooks = new ArrayList<>();
 
     public static void main(String[] args) {
         sysOutDelegate.println(new String[]{"Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!",
-                String.join(" ", getListOfLibraryBooks())});
+                "Library Books\n" + String.join(" ", getListOfLibraryBooks())});
     }
 
     /**
@@ -17,8 +18,13 @@ public class BibliotecaApp {
      * @return
      */
     public static List<String> getListOfLibraryBooks() {
-        List<String> books = new ArrayList<>();
-        return books;
+        return libraryBooks;
+    }
+
+    protected static void setListOfLibraryBooks(String[] books) {
+        for(int i = 0; i < books.length; i++) {
+            libraryBooks.add("hello");
+        }
     }
 
     protected static void setSysOutDelegate(SysOutDelegate val) {

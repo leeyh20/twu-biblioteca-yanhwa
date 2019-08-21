@@ -21,3 +21,19 @@ dependencies {
 
     testImplementation("junit:junit:4.12")
 }
+
+sourceSets {                                // (2)
+    main {                                  // (3)
+        java.srcDir("src/")
+    }
+
+    test {
+        java.srcDir("test/")
+    }
+}
+
+tasks {
+    test {                                  // (5)
+        testLogging.showExceptions = true
+    }
+}
