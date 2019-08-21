@@ -5,7 +5,7 @@ public class BibliotecaApp {
     private static SysOutDelegate sysOutDelegate = new RealSysOut();
 
     public static void main(String[] args) {
-        sysOutDelegate.println("hello");
+        sysOutDelegate.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
 
     protected static void setSysOutDelegate(SysOutDelegate val) {

@@ -7,9 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
-public class ExampleTest {
+public class BibliotecaAppTest {
 
-    String lastSysOutmessage;
+    private String lastSysOutmessage;
 
     @Before
     public void injectLastSysOutDelegate() {
@@ -20,7 +20,7 @@ public class ExampleTest {
     public void shouldShowWelcomeMessage() {
         BibliotecaApp.main(new String[]{});
 
-        assertEquals("Welcome!", lastSysOutmessage);
+        assertEquals("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!", lastSysOutmessage);
     }
 
     private class FakeSysOut implements SysOutDelegate {
