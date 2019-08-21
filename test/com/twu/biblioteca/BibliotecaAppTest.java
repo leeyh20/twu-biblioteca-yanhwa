@@ -28,10 +28,11 @@ public class BibliotecaAppTest {
 
     @Test
     public void shouldShowListOfLibraryBooks() {
-        BibliotecaApp.main(new String[]{});
         String[] books = new String[] {"book1", "book2"};
         BibliotecaApp.setListOfLibraryBooks(books);
-        //List<String> books = BibliotecaApp.getListOfLibraryBooks();
+
+        BibliotecaApp.main(new String[]{});
+
         assertEquals("Library Books\n" + String.join(" ", books), lastSysOutmessage[1]);
     }
 

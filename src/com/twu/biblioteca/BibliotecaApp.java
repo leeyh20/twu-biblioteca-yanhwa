@@ -13,17 +13,13 @@ public class BibliotecaApp {
                 "Library Books\n" + String.join(" ", getListOfLibraryBooks())});
     }
 
-    /**
-     * Should I test this method or test that the list of library books were printed? I currently test how the list is printed
-     * @return
-     */
     public static List<String> getListOfLibraryBooks() {
         return libraryBooks;
     }
 
     protected static void setListOfLibraryBooks(String[] books) {
         for(int i = 0; i < books.length; i++) {
-            libraryBooks.add("hello");
+            libraryBooks.add(books[i]);
         }
     }
 
